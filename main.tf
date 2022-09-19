@@ -1,3 +1,7 @@
+### This is not an operational terrascan file.  
+### it's only there to validate the scan.
+## it's mailny there to 
+
 terraform {
   required_providers {
     aws = {
@@ -116,15 +120,15 @@ resource "aws_security_group" "prod_web" {
     from_port = 80
     to_port   = 80
     protocol  = "tcp"
-//    cidr_blocks = ["0.0.0.0/0"]
-    cidr_blocks = ["172.31.0.0/28"]
+    cidr_blocks = ["0.0.0.0/0"]
+//    cidr_blocks = ["172.31.0.0/28"]
   }
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-//    cidr_blocks = ["0.0.0.0/0"]
-    cidr_blocks = ["172.31.0.0/28"]
+    cidr_blocks = ["0.0.0.0/0"]
+//    cidr_blocks = ["172.31.0.0/28"]
   }
   egress {
     from_port   = 0
